@@ -34,6 +34,7 @@ class User {
 
     }
 
+    
     public function setDate(){
 
         $this->date = date("F j, Y, g:i a"); 
@@ -45,6 +46,5 @@ class User {
         return $this->date;
 
     }
-
 
 }
