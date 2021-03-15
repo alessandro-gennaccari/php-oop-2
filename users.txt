@@ -1,0 +1,24 @@
+
+
+Crea un diagramma per una tabella di db che rappresenti gli Users di un blog (va bene anche un file di testo .txt)
+Crea una classe User che rappresenti quella tabella, e usala per stampare in pagina i dati di alcuni Users (quindi create alcune istanze)
+
+
+
+
+USERS
+Campo                                       Tipo di Dato                                        Attributo
+
+id                                          number - INT //se serve anche BIGINT                PRIMARY_KEY - AUTO_INCREMENT - UNIQUE
+
+name                                        string - VARCHAR(50)                                NOT NULL
+
+lastname                                    string - VARCHAR(50)                                NOT NULL
+
+username                                    string - VARCHAR(50)                                NOT NULL
+
+email                                       string - VARCHAR(100)                               NOT NULL
+
+password                                    string - VARCHAR(40)                                NOT NULL
+
+registeredAT                                date - DATATIME                                     NOT NULL
