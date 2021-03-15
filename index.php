@@ -1,6 +1,7 @@
 <?php
 
 require_once 'User.php';
+require_once 'MoreUserInfo.php';
 
 //Utente 1
 $userone = new User('utentino001', 'utentus01@mail.com');
@@ -42,9 +43,9 @@ $usertwo->setDate();
 $usertwo->getDate();
 
 
-//Utente 3
-$userthree = new User('utentino003', 'utentus03@mail.com');
-$userthree->name = 'utentepterzo';
+//Utente 3 - Ora con la classe diversa da User per aggiungere attributi
+$userthree = new MoreUserInfo('utentino003', 'utentus03@mail.com');
+$userthree->name = 'utenteterzo';
 $userthree->lastname = 'terzocognome';
 
 try {
@@ -61,7 +62,16 @@ try {
 $userthree->setDate();
 $userthree->getDate();
 
-
+try {
+    
+    $userthree->setMobile('3334673829');
+    $userthree->getMobile();
+    
+} catch (Exception $e) {
+    
+    echo $e->getMessage();
+    
+}
 
 //LOG
 // var_dump($userone);
@@ -93,6 +103,8 @@ $users = [$userone, $usertwo, $userthree];
         <p><?php echo $value->name . ' - ' . $value->lastname; ?></p>
         <p><?php echo $value->email; ?></p>
         <p><?php echo $value->date; ?></p>
+        <p><?php echo $value->mobile?></p>
+        
 
     </div>
 
