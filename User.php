@@ -1,5 +1,7 @@
 <?php
 
+require_once 'Intro.php';
+
 class User {
 
     public $name;
@@ -8,6 +10,8 @@ class User {
     public $email;
     private $password;
     public $date;
+
+    use Intro;
 
 
     public function __construct($_username, $_email){
