@@ -21,4 +21,4 @@ email                                       string - VARCHAR(100)               
 
 password                                    string - VARCHAR(40)                                NOT NULL
 
-registeredAT                                date - DATATIME                                     NOT NULL
+registeredAT                                date - TIMESTAMP                                     NOT NULL
