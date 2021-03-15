@@ -73,6 +73,10 @@ try {
     
 }
 
+$userthree->setIntro('Carissimi che visitate il mio profilo, mi chiamo utenteterzo. Bla bla bla bla.');
+$userthree->getIntro();
+
+
 //LOG
 // var_dump($userone);
 // var_dump($usertwo);
@@ -96,7 +100,6 @@ $users = [$userone, $usertwo, $userthree];
 
 
     <?php foreach ($users as $value) { ?>
-
     <div class="utente">
 
         <h2><?php echo $value->username; ?></h2>
@@ -105,9 +108,13 @@ $users = [$userone, $usertwo, $userthree];
         <p><?php echo $value->date; ?></p>
         <p><?php echo $value->mobile?></p>
         
+        <?php if ($value->intro) :?>
+        <p><?php echo $value->intro; ?></p>
+        <?php else: ?>
+        <p><?php echo 'Nessuna Descrizione'; ?></p>
+        <?php endif ?>
 
     </div>
-
     <?php } ?>
     
 
